@@ -12,5 +12,6 @@ public class BattleEncounters {
 		System.out.println("there was peice of paper that went out the way you came in it got disintegrated");
 		System.out.println("instantly, you realize there’s no going back that way.");
 		JOptionPane.showInputDialog("Do you want to ATTACK the skeleton\nDo you want to RUN past the skeleton\n do you want to try to SPOOK the skeleton");
+		
 	}
 }
