@@ -7,6 +7,6 @@ public class UniversalDeath {
 		death();
 	}
 	public static void death() {
-		System.out.println("You died in the dungeon but somehow you feel it isn't over");
+		System.out.println("Congratulations! You died in the dungeon but somehow you feel it isn't over");
 	}
 }

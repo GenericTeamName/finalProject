@@ -34,7 +34,9 @@ public class PuzzleRoom1 {
 			UniversalDeath.death();
 		}
 		if ("3".equals(choice)) {
-			System.out.println("I don't know what you were trying to do but it didn't work");
+			System.out.println("You hear a voice booming in your ears "
+					+ "'I don't know what you were trying to do but it didn't work'");
+			choice();
 		}
 	}
 }
