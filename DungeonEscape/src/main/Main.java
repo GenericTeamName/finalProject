@@ -6,6 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+	}
+	public static void game() {
 		String choicePath, continueGame = "no";
 		String puzzleItems1;
 		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options do you "
@@ -14,7 +17,8 @@ public class Main {
 		System.out.println("You wake up in an unfamiliar room you have no idea how you got there.");
 		System.out.println("You appear to have an empty backpack & amnesia you don’t like where"
 				+ " you are now escape from what appears to be a dungeon.");
-		System.out.println("You see two paths in front of you. One leads left and the other leads right.");
+		System.out.println("You see two paths in front of you. One leads left and the "
+				+ "other leads right.");
 		choicePath = JOptionPane.showInputDialog("Please choose a path LEFT or RIGHT");
 		
 		if ("Left".equalsIgnoreCase(choicePath) || "l".equalsIgnoreCase(choicePath)) {
@@ -34,6 +38,14 @@ public class Main {
 		if ("Left".equalsIgnoreCase(puzzleItems1)) {
 			PuzzleShield.item();
 			PocketKnife.item();
+		}
+	}
+	public static void win() {
+		String playAgain;
+		playAgain = JOptionPane.showInputDialog("You have beaten the game do you wish to try for a"
+				+ "different ending? YES or NO");
+		if ("Yes".equalsIgnoreCase(playAgain)) {
+			game();
 		}
 	}
 

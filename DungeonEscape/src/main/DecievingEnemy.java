@@ -12,6 +12,8 @@ public class DecievingEnemy {
 		System.out.println("You feel the need to investigate the room further");
 		System.out.println("You find an invisible old man holding a torch and he "
 				+ "tries to break it over your head you have to run to the next room.");
+		System.out.println("You realize that this could lead to your death so you run until you "
+				+ "find the exit");
 		
 	}
 }
