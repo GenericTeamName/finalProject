@@ -3,7 +3,7 @@ package main;
 import javax.swing.JOptionPane;
 
 public class RightPath {
-
+	public boolean windDagger = false;
 	public static void main (String [] args) {
 		
 
@@ -17,14 +17,21 @@ public class RightPath {
 		
 		if ("WAIT".equalsIgnoreCase(choice2)) {
 			System.out.println("you can see the other door now matches the wall.");
-			System.out.println("");
+			System.out.println("you should continue forward");
 		}
+
 		if ("PROCEED".equalsIgnoreCase(choice2)) {
+			System.out.println("You proceed down a long empty coridor that lookes to have walls made");
+			System.out.println("out of stone and steel you eventualy come apon a room");
+			TreasureRoom.dagger();
 			
+		}
+			BattleEncounters.skeleton();
+		
 			
 		}
 		
 		
 	}
 
-}
+
