@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		game();
 	}
 	public static void game() {
 		String choicePath, continueGame = "no";
@@ -39,6 +39,7 @@ public class Main {
 			PuzzleShield.item();
 			PocketKnife.item();
 		}
+		FalseBomb.puzzle();
 	}
 	public static void win() {
 		String playAgain;
