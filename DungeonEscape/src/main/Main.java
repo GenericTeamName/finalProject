@@ -11,9 +11,9 @@ public class Main {
 	public static void game() {
 		String choicePath, continueGame = "no";
 		String puzzleItems1;
-		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options do you "
-				+ "understand? If so type YES");
-		
+		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options. Take "
+				+ "If so type YES");
+		do {
 		System.out.println("You wake up in an unfamiliar room you have no idea how you got there.");
 		System.out.println("You appear to have an empty backpack & amnesia you don’t like where"
 				+ " you are now escape from what appears to be a dungeon.");
@@ -40,14 +40,14 @@ public class Main {
 			PocketKnife.item();
 		}
 		FalseBomb.puzzle();
-	}
+	
 	public static void win() {
-		String playAgain;
-		playAgain = JOptionPane.showInputDialog("You have beaten the game do you wish to try for a"
+		String continueGame = "no";
+		continueGame = JOptionPane.showInputDialog("You have beaten the game do you wish to try for a"
 				+ "different ending? YES or NO");
-		if ("Yes".equalsIgnoreCase(playAgain)) {
+		if ("Yes".equalsIgnoreCase(continueGame)) {
 			game();
 		}
 	}
-
+	}while ("Yes".equalsIgnoreCase(continueGame))
 }
