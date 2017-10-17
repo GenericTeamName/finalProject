@@ -9,6 +9,7 @@ public class FalseBomb {
 		puzzle();
 	}
 	public static void puzzle() {
+		int loopStop = 0;
 		String choice;
 		System.out.println("You walk into a room you see a bomb in the middle.");
 		System.out.println("You start shaking as you see a door but it is closed");
@@ -19,20 +20,26 @@ public class FalseBomb {
 		if ("Crit".equalsIgnoreCase(choice)) {
 			System.out.println("You cut the crit wire and it blows up in a glowing blue explosion you see"
 					+ " the words Random Crit in the air as you turn into ashes");
+			loopStop = 1;
 			UniversalDeath.death();
 		}
 		else
 		if ("Red".equalsIgnoreCase(choice) || "Green".equalsIgnoreCase(choice) || 
 				"White".equalsIgnoreCase(choice) || "Black".equalsIgnoreCase(choice)) {
 			System.out.println("You cut the " + choice + " wire and the bomb explodes you into ashes");
+			loopStop = 1;
 			UniversalDeath.death();
 		}
 		else
-		if ("Leave".equalsIgnoreCase(choice) || "Exit".equalsIgnoreCase(choice)) {
+		if ("Leave".equalsIgnoreCase(choice) || "Exit".equalsIgnoreCase(choice) || "Escape".equalsIgnoreCase(choice)) {
 			System.out.println("You open the door and realize it wasn't locked");
+			loopStop = 1;
 			UniversalWin.win();
+			
 		}
 		else
+		if (loopStop == 0) {
 			puzzle();
+		}
 	}
 }

@@ -11,8 +11,12 @@ public class Main {
 	public static void game() {
 		String choicePath, continueGame = "no";
 		String puzzleItems1;
+		int whileFactor = 0;
 		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options. Take "
 				+ "If so type YES");
+		if ("Yes".equalsIgnoreCase(continueGame)) {
+			whileFactor = 1;
+		}
 		do {
 		System.out.println("You wake up in an unfamiliar room you have no idea how you got there.");
 		System.out.println("You appear to have an empty backpack & amnesia you don’t like where"
@@ -38,16 +42,21 @@ public class Main {
 		if ("Left".equalsIgnoreCase(puzzleItems1)) {
 			PuzzleShield.item();
 			PocketKnife.item();
+			FalseBomb.puzzle();
 		}
-		FalseBomb.puzzle();
-	
+		}while(whileFactor == 1);
+	}
 	public static void win() {
 		String continueGame = "no";
 		continueGame = JOptionPane.showInputDialog("You have beaten the game do you wish to try for a"
 				+ "different ending? YES or NO");
 		if ("Yes".equalsIgnoreCase(continueGame)) {
-			game();
+			game();	
+		}
+		if ("Yes".equalsIgnoreCase(continueGame)) {
+			
 		}
 	}
-	}while ("Yes".equalsIgnoreCase(continueGame))
+		
 }
+
