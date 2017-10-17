@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+
 public class PuzzleShield {
 
 	public static void main(String[] args) {
@@ -7,12 +9,12 @@ public class PuzzleShield {
 		item();
 	}
 	public static void item() {
-		System.out.println("The path to the right took you to a room "
+		JOptionPane.showMessageDialog(null, "The path to the right took you to a room "
 				+ "where a small blue shield appears to be emitting a faint light.");
-		System.out.println("You reach out cautiously to touch the shield and as you do so you hear this"
+		JOptionPane.showMessageDialog(null, "You reach out cautiously to touch the shield and as you do so you hear this"
 				+ "booming in your ear.");
-		System.out.println("'YOU FOUND THE PUZZLE SHIELD, THAT WILL STOP YOU FROM DIEING ONCE FROM A "
+		JOptionPane.showMessageDialog(null, "'YOU FOUND THE PUZZLE SHIELD, THAT WILL STOP YOU FROM DIEING ONCE FROM A "
 				+ "PUZZLE YOU CAN STILL DIE FROM TRAPS AND OTHER THINGS.'");
-		System.out.println("You see that there is only one way so you continue onwards");
+		JOptionPane.showMessageDialog(null, "You see that there is only one way so you continue onwards");
 	}
 }

@@ -1,6 +1,6 @@
 package main;
 
-
+import javax.swing.JOptionPane;
 
 public class StartLeft {
 
@@ -9,9 +9,9 @@ public class StartLeft {
 		mineTurtle();
 	}
 	public static void mineTurtle() {
-		System.out.println("The door slams down to the ground and clicks loudly as it locks in place.");
-		System.out.println("Guess there’s nowhere to go but forwards.");
-		System.out.println("There appears to be a small turtle statue on a pedestal with a "
+		JOptionPane.showMessageDialog(null, "The door slams down to the ground and clicks loudly as it locks in place.");
+		JOptionPane.showMessageDialog(null, "Guess there’s nowhere to go but forwards.");
+		JOptionPane.showMessageDialog(null, "There appears to be a small turtle statue on a pedestal with a "
 				+ "button coming out of the top.");
 		
 	}

@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+
 public class UniversalDeath {
 
 	public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class UniversalDeath {
 		death();
 	}
 	public static void death() {
-		System.out.println("Congratulations! You died in the dungeon but somehow you feel it isn't over");
+		JOptionPane.showMessageDialog(null, "Congratulations! You died in the dungeon but somehow you feel it isn't over");
 		Main.continueChoice();
 	}
 }
