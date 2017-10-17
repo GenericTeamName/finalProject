@@ -8,5 +8,6 @@ public class UniversalDeath {
 	}
 	public static void death() {
 		System.out.println("Congratulations! You died in the dungeon but somehow you feel it isn't over");
+		Main.continueChoice();
 	}
 }

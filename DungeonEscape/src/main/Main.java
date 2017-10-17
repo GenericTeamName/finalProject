@@ -3,7 +3,7 @@ package main;
 import javax.swing.JOptionPane;
 
 public class Main {
-
+static int loopStop = 1;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		game();
@@ -11,11 +11,14 @@ public class Main {
 	public static void game() {
 		String choicePath, continueGame = "no";
 		String puzzleItems1;
-		int whileFactor = 0;
+		loopStop = 0;
 		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options. Take "
 				+ "If so type YES");
 		if ("Yes".equalsIgnoreCase(continueGame)) {
-			whileFactor = 1;
+			loopStop = 1;
+		}
+		if ("No".equalsIgnoreCase(continueGame)) {
+			loopStop = 0;
 		}
 		do {
 		System.out.println("You wake up in an unfamiliar room you have no idea how you got there.");
@@ -44,7 +47,7 @@ public class Main {
 			PocketKnife.item();
 			FalseBomb.puzzle();
 		}
-		}while(whileFactor == 1);
+		}while(loopStop == 1);
 	}
 	public static void win() {
 		String continueGame = "no";
@@ -53,9 +56,16 @@ public class Main {
 		if ("Yes".equalsIgnoreCase(continueGame)) {
 			game();	
 		}
-		if ("Yes".equalsIgnoreCase(continueGame)) {
-			
+		
+	}
+	public static void continueChoice() {
+		String yesNo;
+		yesNo = JOptionPane.showInputDialog("Do you wish to continue? YES or NO.");
+		if ("Yes".equalsIgnoreCase(yesNo)) {
+			loopStop = 1;
 		}
+		else
+			loopStop = 0;
 	}
 		
 }
