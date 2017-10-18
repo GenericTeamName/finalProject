@@ -13,7 +13,7 @@ static int loopStop = 1;
 		String puzzleItems1;
 		loopStop = 0;
 		continueGame = JOptionPane.showInputDialog("Pre-Start note words in all CAPS are options. Take "
-				+ "If so type YES");
+				+ "If so type YES. ");
 		if ("Yes".equalsIgnoreCase(continueGame)) {
 			loopStop = 1;
 		}
@@ -43,6 +43,7 @@ static int loopStop = 1;
 		puzzleItems1 = JOptionPane.showInputDialog("Which way do you choose LEFT or RIGHT");
 		if ("Right".equalsIgnoreCase(puzzleItems1)) {
 			PuzzleShield.item();
+			DecievingEnemy.enemy();
 			PocketKnife.item();
 		}
 		if ("Left".equalsIgnoreCase(puzzleItems1)) {

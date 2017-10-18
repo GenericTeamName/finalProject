@@ -26,7 +26,7 @@ public class PuzzleRoom1 {
 		choice = JOptionPane.showInputDialog("You have 3 Options \n1 Use Bottle \n2 "
 				+ "Use the Mine Turtle \n3 Use your hands to put water on the pedestal");
 		if ("1".equals(choice)) {
-			JOptionPane.showMessageDialog(null, "You fill the water with green water and place it on the pedestal");
+			JOptionPane.showMessageDialog(null, "You fill the Green Bottle with water and place it on the pedestal");
 			JOptionPane.showMessageDialog(null, "The pedestal hums for a second and then the door clicks open you proceed");
 		}
 		if ("2".equals(choice)) {
