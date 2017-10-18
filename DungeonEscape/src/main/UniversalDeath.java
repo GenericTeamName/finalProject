@@ -10,6 +10,6 @@ public class UniversalDeath {
 	}
 	public static void death() {
 		JOptionPane.showMessageDialog(null, "Congratulations! You died in the dungeon but somehow you feel it isn't over");
-		Main.continueChoice();
+		PsuedoMain.continueChoice();
 	}
 }

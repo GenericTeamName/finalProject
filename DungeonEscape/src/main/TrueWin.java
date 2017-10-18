@@ -18,6 +18,6 @@ public class TrueWin {
 		JOptionPane.showMessageDialog(null, "‘YOU CANNOT KILL ME I AM YOUR GOD!’");
 		JOptionPane.showMessageDialog(null, "He then proceeds to stab you repeatedly making sure you do not "
 				+ "get up ever again");
-		Main.win();
+		PsuedoMain.win();
 	}
 }
