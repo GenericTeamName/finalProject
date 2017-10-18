@@ -4,9 +4,8 @@ import javax.swing.JOptionPane;
 
 public class RightPath {
     static boolean windDagger = false;
+    static boolean lightSpear = false;
 	static String attack;
-	static String run;
-	static String spook;
 	static int random;
 	static boolean player;
 	static boolean enemy;
@@ -17,27 +16,30 @@ public class RightPath {
 
 
 	public static void right() {
-		System.out.println("You decided to go right and the door slams shut behind you.");
+		JOptionPane.showMessageDialog(null, "You decided to go right and the door slams shut behind you.");
 		String choice2 = JOptionPane.showInputDialog("Do you PROCEED or WAIT");
 		
 		
 		if ("WAIT".equalsIgnoreCase(choice2)) {
-			System.out.println("you can see the other door now matches the wall.");
-			System.out.println("you should continue forward");
+			JOptionPane.showMessageDialog(null, "you can see the other door now matches the wall.");
+			JOptionPane.showMessageDialog(null, "you should continue forward");
 		}
 
 		if ("PROCEED".equalsIgnoreCase(choice2)) {
-			System.out.println("You proceed down a long empty coridor that lookes to have walls made");
-			System.out.println("out of stone and steel you eventualy come apon a room");
+			JOptionPane.showMessageDialog(null, "You proceed down a long empty coridor that lookes to have walls made");
+			JOptionPane.showMessageDialog(null, "out of stone and steel you eventualy come apon a room");
 			dagger();
 			
 		}
 		skeleton();
-		if (player = true) {
-			System.out.println("you exit the room in triumph and proceed down the hall");
-			System.out.println("you enter a room resembling a library");
-			System.out.println("a book case ");
-		}
+		
+			JOptionPane.showMessageDialog(null, "you exit the room in triumph and proceed down the hall");
+			JOptionPane.showMessageDialog(null, "at the end of the hall was a old rusted iron door\n it seems like it would not budge but when you push on it it moves easily");
+			Spear();
+			JOptionPane.showMessageDialog(null,"you proceed down a hall lined with book shelves");
+			JOptionPane.showMessageDialog(null, "you enter a room resembling a library");
+			JOptionPane.showMessageDialog(null, "a book case slides in plase behind you closeing off your escape route ");
+				
 		
 				
 			}
@@ -45,85 +47,169 @@ public class RightPath {
 /////////////////////////////!!!Treasures!!!/////////////////////////////////////////////////////////////////////////
 	public static void dagger() {
 		
-		 System.out.println("There was a very vibrant energy coming from the center of this room	");
-		System.out.println( "on a pedestal there was a dagger with a curved blade" );
+		 JOptionPane.showMessageDialog(null, "There was a very vibrant energy coming from the center of this room	");
+		JOptionPane.showMessageDialog( null, "on a pedestal there was a dagger with a curved blade" );
 		String choice3 = JOptionPane.showInputDialog("would you like to PICK UP the dagger or LEAVE it");
 		if ("LEAVE".equalsIgnoreCase(choice3)) {
-			System.out.println("you choose to leave the dagger behind and procced out the exit");
-			System.out.println("after exiting the door it shuts and locks behind you");
+			JOptionPane.showMessageDialog(null, "you choose to leave the dagger behind and procced out the exit");
+			JOptionPane.showMessageDialog(null, "after exiting the door it shuts and locks behind you");
 		}
 		if("PICK UP".equalsIgnoreCase(choice3)) {
-			System.out.println("you decided to pick up the dagger it crackles with energy");
-			System.out.println("as you procced to the exit you feel a gentle breeze");
-			System.out.println("after exiting the room the door shuts and locks behind you");
+			JOptionPane.showMessageDialog(null, "you decided to pick up the dagger it crackles with energy");
+			JOptionPane.showMessageDialog(null, "as you procced to the exit you feel a gentle breeze");
+			JOptionPane.showMessageDialog(null, "after exiting the room the door shuts and locks behind you");
 			windDagger = true;
 		}
+	}
+	public static void Spear() {
+		
+		 JOptionPane.showMessageDialog(null, "There was a bright crackling energy coming from the center of this room	");
+			JOptionPane.showMessageDialog( null, "impaled into the ground was a black iron spear with bright sparks coming off of it" );
+			String choice4 = JOptionPane.showInputDialog("would you like to PICK UP the Spear or LEAVE it");
+			if ("LEAVE".equalsIgnoreCase(choice4)) {
+				JOptionPane.showMessageDialog(null, "you choose to leave the Spear behind and procced out the exit");
+				JOptionPane.showMessageDialog(null, "after exiting the door it shuts and locks behind you");
+			}
+			if("PICK UP".equalsIgnoreCase(choice4)) {
+				JOptionPane.showMessageDialog(null, "you decided to pick up the dagger it crackles with electricity");
+				JOptionPane.showMessageDialog(null, "as you procced to the exit you feel a gentle breeze");
+				JOptionPane.showMessageDialog(null, "after exiting the room the door shuts and locks behind you");
+				lightSpear = true;
+			}
 	}
 		
 	
 	
 //////////////////////////!!!!!BATTLES GO HERE!!!!!/////////////////////////////////////////////////////////////////////
 	public static void skeleton() {
-		System.out.println("you walk into a small room with a skeleton holding a spork");
-		System.out.println("there was peice of paper that went out the way you came in it got disintegrated");
-		System.out.println("instantly, you realize there’s no going back that way.");
+		JOptionPane.showMessageDialog(null, "you walk into a small room with a skeleton holding a spork");
+		JOptionPane.showMessageDialog(null, "there was peice of paper that went out the way you came in it got disintegrated");
+		JOptionPane.showMessageDialog(null, "instantly, you realize there’s no going back that way.");
 		attack = JOptionPane.showInputDialog("Do you want to ATTACK the skeleton\nDo you want to RUN past the skeleton\n do you want to try to SPOOK the skeleton");
 		if("ATTACK".equalsIgnoreCase(attack) ) {
+			while(enemy) {
 			random = 1 + (int)(Math.random() * 100);
-			while(enemy == true && player == true) {
+			
 			if(windDagger = true) {
 				if(random < 90 && random > 50) {
-					System.out.println("you won the fight by hiting the skeleton in the head");
+					
+					JOptionPane.showMessageDialog(null, "you won the fight by hiting the skeleton in the head");
 					enemy = false;
 				}
-				if(random <= 50 && random >=11) {
-					System.out.println("you hit the wall next to the skeliton and miss");
-					System.out.println("you stepped back out of the skeletons range");
+				else if(random <= 50 && random >=11) {
+					JOptionPane.showMessageDialog(null, "you hit the wall next to the skeliton and miss");
+					JOptionPane.showMessageDialog(null, "you stepped back out of the skeletons range");
+					enemy = true;
 				}
-				if(random <= 10) {
-					System.out.println("you somehow not only missed but hit the floor");
-					System.out.println("the skeleton hits you while your down");
-					System.out.println("YOU DIED");
-					player = false;
+				
+				else if(random <= 10) {
+					JOptionPane.showMessageDialog(null, "you somehow not only missed but hit the floor");
+					JOptionPane.showMessageDialog(null, "the skeleton hits you while your down");
+					enemy = false;
 					Dead.Death();
 					
 				}
 			}
 				if (windDagger = false) {
-					if(random < 90 && random > 70) {
-						System.out.println("you won the fight by hiting the skeleton in the head");
+					if(random < 100 && random > 70) {
+						JOptionPane.showMessageDialog(null, "you won the fight by hiting the skeleton in the head");
 						enemy = false;
 					}
 					else if(random <= 70 && random >=31) {
-						System.out.println("you hit the wall next to the skeliton and miss");
-						System.out.println("you stepped back out of the skeletons range");
+						JOptionPane.showMessageDialog(null, "you hit the wall next to the skeleton and miss");
+						JOptionPane.showMessageDialog(null, "you stepped back out of the skeleton's range");
+						enemy = true;
 					}
 					else if(random <= 30) {
-						System.out.println("you somehow not only missed but hit the floor");
-						System.out.println("the skeleton hits you while your down");
-						Dead.Death();
-						
-				}
-					
+						JOptionPane.showMessageDialog(null, "you somehow not only missed but hit the floor");
+						JOptionPane.showMessageDialog(null, "the skeleton hits you while your down");
+						enemy = false;
+						Dead.Death();		
+				}		
 		   }
-			
-		}
-			
-			
-		
-	}
-		if ("RUN".equalsIgnoreCase(run)) {
-			System.out.println("youturn to run and the skeleton attacks you");
-			Dead.Death();
+			}
+				if ("RUN".equalsIgnoreCase(attack)) {
+					JOptionPane.showMessageDialog(null, "youturn to run and the skeleton attacks you");
+					Dead.Death();
 			
 		 }
-		if("Spook".equalsIgnoreCase(spook)) {
-			System.out.println("the skeleton finds your atemt funny then procceeds to spook you");
-			System.out.println("the skeleton spooks you to death");
-			Dead.Death();
+				if("Spook".equalsIgnoreCase(attack)) {
+					JOptionPane.showMessageDialog(null, "the skeleton finds your atemt funny then procceeds to spook you");
+					JOptionPane.showMessageDialog(null, "the skeleton spooks you to death");
+					Dead.Death();
 		}
 		}
-}
+		}
+			static void library() {
+				JOptionPane.showMessageDialog(null, "There was a vulture flying around the library you just walked into.\n the vulture looks excited and eager to meet his new victim."
+						+ " \nYou think of maybe taking a book and throwing it at it in hopes to knock it out at the very least.");
+				
+				JOptionPane.showMessageDialog(null, "The vulture has a keycard strapped to it’s leg so you have to fight it.");
+				attack = JOptionPane.showInputDialog("Do you want to try to JUMP and attack it\nDo you want to throw a BOOK at it\n do you want to throw your SPEAR at it");
+				if("Jump".equalsIgnoreCase(attack) ) {
+					while(enemy) {
+					random = 1 + (int)(Math.random() * 100);
+					
+					if(windDagger = true) {
+						if(random < 100 && random > 90) {
+							
+							JOptionPane.showMessageDialog(null, "you won the fight by hiting the vulture with your dagger");
+							enemy = false;
+						}
+						else if(random <= 90 && random >=71) {
+							JOptionPane.showMessageDialog(null, "you jump but the vulture is still flying too high");
+							JOptionPane.showMessageDialog(null, "you land on the ground and continue fighting");
+							enemy = true;
+						}
+						
+						else if(random <= 70) {
+							JOptionPane.showMessageDialog(null, "you jump but don't hit the vultue and it slashes you with its talons");
+							JOptionPane.showMessageDialog(null, "you die from bleeding out");
+							
+							enemy = false;
+							Dead.Death();
+							
+						}
+					}
+						if (windDagger = false) {
+							if(random < 100 && random > 99) {
+								JOptionPane.showMessageDialog(null, "you won the fight by hiting the vulture with your fist");
+								enemy = false;
+							}
+							else if(random <= 98 && random >=80) {
+								JOptionPane.showMessageDialog(null, "you jump but the vulture is still flying too high");
+								JOptionPane.showMessageDialog(null, "you land on the ground and continue fighting");
+								enemy = true;
+							}
+							else if(random <= 79) {
+								JOptionPane.showMessageDialog(null, "you jump but don't hit the vultue and it slashes you with its talons");
+								JOptionPane.showMessageDialog(null, "you die from bleeding out");
+								
+								enemy = false;
+								Dead.Death();
+										
+						}		
+				   }
+					}
+						if ("book".equalsIgnoreCase(attack)) {
+							JOptionPane.showMessageDialog(null, "you throw the book and the vulture ceches it and throws it at your head");
+							JOptionPane.showMessageDialog(null, "the heavy book hits you in the head knocking you out");
+							Dead.Death();
+					
+				 }
+						if("spear".equalsIgnoreCase(attack)) {
+							JOptionPane.showMessageDialog(null, "you throw the spear at it killing it apon contact");
+							JOptionPane.showMessageDialog(null, "you grab the keycard off its leg and open the exit");
+							
+				}
+				}
+			}
+	
+	
+	
+	
+	}
+
 		
 		
 	
