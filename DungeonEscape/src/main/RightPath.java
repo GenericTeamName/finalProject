@@ -7,8 +7,8 @@ public class RightPath {
     static boolean lightSpear = false;
 	static String attack;
 	static int random;
-	static boolean player;
-	static boolean enemy;
+	static boolean player = true;
+	static boolean enemy = true;
 	public static void main (String [] args) {
 		
 
@@ -23,9 +23,10 @@ public class RightPath {
 		if ("WAIT".equalsIgnoreCase(choice2)) {
 			JOptionPane.showMessageDialog(null, "you can see the other door now matches the wall.");
 			JOptionPane.showMessageDialog(null, "you should continue forward");
+			dagger();
 		}
 
-		if ("PROCEED".equalsIgnoreCase(choice2)) {
+		else if ("PROCEED".equalsIgnoreCase(choice2)) {
 			JOptionPane.showMessageDialog(null, "You proceed down a long empty coridor that lookes to have walls made");
 			JOptionPane.showMessageDialog(null, "out of stone and steel you eventualy come apon a room");
 			dagger();
@@ -39,7 +40,9 @@ public class RightPath {
 			JOptionPane.showMessageDialog(null,"you proceed down a hall lined with book shelves");
 			JOptionPane.showMessageDialog(null, "you enter a room resembling a library");
 			JOptionPane.showMessageDialog(null, "a book case slides in plase behind you closeing off your escape route ");
-				
+			library();
+			JOptionPane.showMessageDialog(null, "after going thruogh the door you come across an empty room");
+			finalPuzzle();
 		
 				
 			}
@@ -72,7 +75,7 @@ public class RightPath {
 			}
 			if("PICK UP".equalsIgnoreCase(choice4)) {
 				JOptionPane.showMessageDialog(null, "you decided to pick up the dagger it crackles with electricity");
-				JOptionPane.showMessageDialog(null, "as you procced to the exit you feel a gentle breeze");
+				JOptionPane.showMessageDialog(null, "as you procced to the exit you feel a strong breeze");
 				JOptionPane.showMessageDialog(null, "after exiting the room the door shuts and locks behind you");
 				lightSpear = true;
 			}
@@ -87,7 +90,7 @@ public class RightPath {
 		JOptionPane.showMessageDialog(null, "instantly, you realize there’s no going back that way.");
 		attack = JOptionPane.showInputDialog("Do you want to ATTACK the skeleton\nDo you want to RUN past the skeleton\n do you want to try to SPOOK the skeleton");
 		if("ATTACK".equalsIgnoreCase(attack) ) {
-			while(enemy) {
+		do {
 			random = 1 + (int)(Math.random() * 100);
 			
 			if(windDagger = true) {
@@ -127,7 +130,8 @@ public class RightPath {
 						Dead.Death();		
 				}		
 		   }
-			}
+			}while(enemy);
+		}
 				if ("RUN".equalsIgnoreCase(attack)) {
 					JOptionPane.showMessageDialog(null, "youturn to run and the skeleton attacks you");
 					Dead.Death();
@@ -139,7 +143,7 @@ public class RightPath {
 					Dead.Death();
 		}
 		}
-		}
+		
 			static void library() {
 				JOptionPane.showMessageDialog(null, "There was a vulture flying around the library you just walked into.\n the vulture looks excited and eager to meet his new victim."
 						+ " \nYou think of maybe taking a book and throwing it at it in hopes to knock it out at the very least.");
@@ -147,7 +151,7 @@ public class RightPath {
 				JOptionPane.showMessageDialog(null, "The vulture has a keycard strapped to it’s leg so you have to fight it.");
 				attack = JOptionPane.showInputDialog("Do you want to try to JUMP and attack it\nDo you want to throw a BOOK at it\n do you want to throw your SPEAR at it");
 				if("Jump".equalsIgnoreCase(attack) ) {
-					while(enemy) {
+				do {
 					random = 1 + (int)(Math.random() * 100);
 					
 					if(windDagger = true) {
@@ -190,7 +194,8 @@ public class RightPath {
 										
 						}		
 				   }
-					}
+					}while(enemy);
+				}
 						if ("book".equalsIgnoreCase(attack)) {
 							JOptionPane.showMessageDialog(null, "you throw the book and the vulture ceches it and throws it at your head");
 							JOptionPane.showMessageDialog(null, "the heavy book hits you in the head knocking you out");
@@ -203,13 +208,40 @@ public class RightPath {
 							
 				}
 				}
+//////////////////////////////////////////////////////////!!!Puzzle Room!!!//////////////////////////////////////////////////////////////////////
+			static void finalPuzzle() {
+				JOptionPane.showMessageDialog(null, "you find that the room is empty exept one light dangling from the celing");
+				do {
+				JOptionPane.showMessageDialog(null, "what are you going to do?");
+				String choiceFinal = JOptionPane.showInputDialog("Will you WALK around aimlessly\n ATTACK the light fixture\n TURN AROUND and go back to the library\n walk BACKWARDS back into the library");
+				if("WALK".equalsIgnoreCase(choiceFinal)) {
+					JOptionPane.showMessageDialog(null, "you walk arould aimlessly for 6 hours and it seems nothing is going to happen");
+					player = true;
+				}
+				if("ATTACK".equalsIgnoreCase(choiceFinal)) {
+					JOptionPane.showMessageDialog(null, "you hit the light fixture and the light breaks now its dark");
+					player = true;
+				}
+				if("TURN AROUND".equalsIgnoreCase(choiceFinal)) {
+					JOptionPane.showMessageDialog(null, "you head back into the library and pull books"
+							+ "\n off the shelves to see if it will unlock a secret exit");
+					JOptionPane.showMessageDialog(null, "unfortunately this is a budget dungen becase the dundgon master couldn't aford them"
+							+ "\nyou head back into the empty room to think about what to do next");
+					player = true;
+				}
+				if("BACKWARDS".equalsIgnoreCase(choiceFinal)) {
+				JOptionPane.showMessageDialog(null, "you walked backwards out of the empty room and you come out not in the library\n but outside of the dungion entirely");
+				Dead.finish();
+				}
+				
+				}while(player);
+			}
 			}
 	
 	
 	
 	
-	}
-
+	
 		
 		
 	

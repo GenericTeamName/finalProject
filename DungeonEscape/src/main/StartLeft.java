@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class StartLeft {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		mineTurtle();
 	}
 	public static void mineTurtle() {

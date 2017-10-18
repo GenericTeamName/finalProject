@@ -14,4 +14,8 @@ public class UniversalWin {
 		JOptionPane.showMessageDialog(null, "That is until he hits you on the head and drags you back into the begining");
 		PsuedoMain.continueChoice();
 	}
+	public static void fightwin() {
+		JOptionPane.showMessageDialog(null, "you are finaly free of the dungeon \nuntil someone knocks you unconscious and drags you back to the start");
+	
+	}
 }

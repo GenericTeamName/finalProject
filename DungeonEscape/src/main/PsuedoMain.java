@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class PsuedoMain {
 	static int loopStop = 1;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		game();
 	}
 	public static void game() {
@@ -35,6 +35,9 @@ public class PsuedoMain {
 			if ("Press".equalsIgnoreCase(push)) {
 				UniversalDeath.death();
 			}
+		}
+		if("Right".equalsIgnoreCase(choicePath)) {
+			RightPath.right();
 		}
 		PuzzleRoom1.puzzle();
 		JOptionPane.showMessageDialog(null, "You see two more paths ahead of you, what is up with this labyrinth?");
